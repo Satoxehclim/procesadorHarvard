@@ -23,13 +23,21 @@ signal registros : reg_array := (others => (others => '0'));
 begin 
     process(clk_i)
     begin
-        if (rising_edge(clk_i)) then
+        if rising_edge(clk_i) then
             if write_reg = '1' and to_integer(unsigned(direccion_C)) /= ZERO_REG then
                 registros(to_integer(unsigned(direccion_C))) <= dato_C;
             end if;
         end if;
     end process;
 
-    dato_A <= registros(to_integer(unsigned(direccion_A)));
-    dato_B <= registros(to_integer(unsigned(direccion_B)));
+    process (read_reg)
+    begin
+        if read_reg = '1' then
+            dato_A <= registros(to_integer(unsigned(direccion_A)));
+            dato_B <= registros(to_integer(unsigned(direccion_B)));
+        else
+            dato_A <= (others => '0');
+            dato_B <= (others => '0');
+        end if;
+    end process;
 end Behavioral;
