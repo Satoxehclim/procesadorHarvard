@@ -1,4 +1,4 @@
-library library IEEE;
+library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
@@ -20,11 +20,11 @@ begin
             pc_reg <= (others => '0');
         elsif rising_edge(clk_i) then
             if isbranch_i = '1' then
-                pc_reg <= pc_i;
+                pc_reg <= std_logic_vector(unsigned(pc_reg) + unsigned(pc_i));
             else
-                pc_reg <= STD_LOGIC_VECTOR(unsigned(pc_reg)+1);
+                pc_reg <= std_logic_vector(unsigned(pc_reg) + 1);
             end if;
         end if;
     end process;
-    pc_out <= pc_reg;
+    pc_o <= pc_reg;
 end Behavioral;

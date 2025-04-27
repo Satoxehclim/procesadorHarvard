@@ -20,12 +20,12 @@ architecture Behavioral of memoria_de_instrucciones is type rom_type is array (0
             for i in rom_type'range loop
                 readline(rom_file, rom_line);
                 read(rom_line, rom_value);
-                temp_row(i) := to_stdlogicvector(rom_value);
+                temp_rom(i) := to_stdlogicvector(rom_value);
             end loop;
             return temp_rom;
         end function;
 
-        signal rom : rom_type := init_rom_form_file("datos.bin");
+        signal rom : rom_type := init_rom_from_file("datos.bin");
 begin
     instruccion <= rom(to_integer(unsigned(pc_actual)));
 end Behavioral;

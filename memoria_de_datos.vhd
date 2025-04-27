@@ -13,17 +13,17 @@ entity memoria_datos is
     );
 end memoria_datos;
 
-architecture Behavioral of memoria_datos is type ram_type is array (o to 1023) of STD_LOGIC_VECTOR(31 downto 0);
+architecture Behavioral of memoria_datos is type ram_type is array (0 to 1023) of STD_LOGIC_VECTOR(31 downto 0);
 signal ram : ram_type := (others => (others => '0'));
 begin
     process(clk_i)
     begin
         if rising_edge(clk_i) then
             if mem_write = '1' then
-                ram(to_integer(unsigned(dir_mem_i))) <= dato_mem_i;
+                ram(to_integer(unsigned(dir_mem_i(9 downto 0)))) <= dato_mem_i;
             end if;
         end if;
     end process;
 
-    dato_mem_o <= ram(to_integer(unsigned(dir_mem_i))) when mem_read = '1' else (others => '0');
-end Behavioral
+    dato_mem_o <= ram(to_integer(unsigned(dir_mem_i(9 downto 0)))) when mem_read = '1' else (others => '0');
+end Behavioral;
