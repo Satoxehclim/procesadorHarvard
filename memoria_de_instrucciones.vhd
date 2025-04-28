@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use STD.textio.all;
+use IEEE.numeric_std.all;
 
 entity memoria_de_instrucciones is
     port(

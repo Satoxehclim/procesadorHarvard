@@ -4,8 +4,8 @@ use IEEE.numeric_std.all;
 
 entity extension_signo is
     port(
-        instruccion_i : STD_LOGIC_VECTOR(31 downto 0);
-        inmediato_o  : STD_LOGIC_VECTOR(31 downto 0)
+        instruccion_i : in STD_LOGIC_VECTOR(31 downto 0);
+        inmediato_o  : out STD_LOGIC_VECTOR(31 downto 0)
     );
 end extension_signo;
 
@@ -25,7 +25,7 @@ begin
             when "10110" | "10111" | "11000" | "11001" | "11010" | "11011"| "11100" | "11101" =>
                 inmediato_o <= (31 downto 26 => instruccion_i(31)) & instruccion_i(31 downto 5);
             when others => 
-            inmediato_o <= (others => '0')
+            inmediato_o <= (others => '0');
         end case;
     end process;
 end Behavioral;

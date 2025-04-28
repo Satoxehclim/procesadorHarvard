@@ -1,0 +1,25 @@
+v 4
+file . "procesador_harvard.vhd" "c2de7fe46f9e602c75fe19af5d21a90becc9dc06" "20250428023852.916":
+  entity procesador_harvard at 1( 0) + 0 on 37;
+  architecture behavioral of procesador_harvard at 11( 211) + 0 on 38;
+file . "ALU.vhd" "451ffcd3bdf83895e595add9d97d819af5aae61b" "20250428023905.819":
+  entity alu at 1( 0) + 0 on 49;
+  architecture behavioral of alu at 18( 523) + 0 on 50;
+file . "memoria_de_instrucciones.vhd" "26356b29b002b7475b1cbda6febcb70cc3f34ba9" "20250428023905.578":
+  entity memoria_de_instrucciones at 1( 0) + 0 on 41;
+  architecture behavioral of memoria_de_instrucciones at 13( 297) + 0 on 42;
+file . "memoria_datos.vhd" "cb9e1be1522b7bedc4feb16f7da580422789e2ab" "20250428023905.886":
+  entity memoria_datos at 1( 0) + 0 on 51;
+  architecture behavioral of memoria_datos at 16( 416) + 0 on 52;
+file . "banco_de_registros.vhd" "9c1ffa80c4a6ab718f8f7a66e36db1225bfaf984" "20250428023905.698":
+  entity banco_de_registros at 1( 0) + 0 on 45;
+  architecture behavioral of banco_de_registros at 19( 602) + 0 on 46;
+file . "contador_programa.vhd" "00c7defe17f22d0f31b5fbdb1907dab838c22c8c" "20250428023905.537":
+  entity contador_programa at 1( 0) + 0 on 39;
+  architecture behavioral of contador_programa at 15( 371) + 0 on 40;
+file . "extension_signo.vhd" "f144d4b5d73c817f90c917a59c7028b77e9b41bc" "20250428023905.757":
+  entity extension_signo at 1( 0) + 0 on 47;
+  architecture behavioral of extension_signo at 12( 261) + 0 on 48;
+file . "decodificador.vhd" "5821f73b7bfd2422e39aa6dececee61b3c9c1c16" "20250428023905.626":
+  entity decodificador at 1( 0) + 0 on 43;
+  architecture behavioral of decodificador at 19( 543) + 0 on 44;

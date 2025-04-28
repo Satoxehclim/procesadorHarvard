@@ -12,7 +12,7 @@ entity banco_de_registros is
         write_reg   : in std_logic;
         dato_A      : out STD_LOGIC_VECTOR(31 downto 0);
         dato_B      : out STD_LOGIC_VECTOR(31 downto 0);
-        clk_i       : in  std_logic;
+        clk_i       : in  std_logic
     );
 end banco_de_registros;
 

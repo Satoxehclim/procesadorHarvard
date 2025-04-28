@@ -1,0 +1,8 @@
+ghdl -a contador_programa.vhd
+ghdl -a memoria_de_instrucciones.vhd
+ghdl -a decodificador.vhd
+ghdl -a banco_de_registros.vhd
+ghdl -a extension_signo.vhd
+ghdl -a ALU.vhd
+ghdl -a memoria_datos.vhd
+ghdl -a procesador_harvard.vhd

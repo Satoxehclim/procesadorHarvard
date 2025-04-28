@@ -1,15 +1,15 @@
-library library IEEE;
+library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity memoria_datos is
     port(
-        dato_mem_i : STD_LOGIC_VECTOR(31 downto 0);
-        dir_mem_i  : STD_LOGIC_VECTOR(31 downto 0);
-        clk_i      : STD_LOGIC;
-        mem_read   : STD_LOGIC;
-        mem_write  : STD_LOGIC;
-        dato_mem_o : STD_LOGIC_VECTOR(31 downto 0)
+        dato_mem_i : in STD_LOGIC_VECTOR(31 downto 0);
+        dir_mem_i  : in STD_LOGIC_VECTOR(31 downto 0);
+        clk_i      : in STD_LOGIC;
+        mem_read   : in STD_LOGIC;
+        mem_write  : in STD_LOGIC;
+        dato_mem_o : out STD_LOGIC_VECTOR(31 downto 0)
     );
 end memoria_datos;
 
